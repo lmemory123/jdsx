@@ -169,9 +169,8 @@ main {
 
 /* Specific section styles */
 .search-recommend {
-    height: 318px;
-    background: rgba(255, 0, 0, 0.5) url("../img/searchBGI.png") no-repeat center top;
-
+    height: 325px;
+    background: rgba(221, 29, 29, 0.7) url("../img/searchBGI.png")   no-repeat center top;
 
 }
 
@@ -181,6 +180,7 @@ main {
     /*background-color: #fff;*/
     display: flex;
     align-items: center;
+
 }
 
 .search .logo {
@@ -222,12 +222,17 @@ main {
     transform: translateY(-50%);
     width: 80px;
     height: 40px;
-    background-color: #f0f0f0;
+    background-color: red;
+    color: #FFF;
     border: 1px solid #ccc;
+    font-size: 18px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.search-btn:hover {
+    cursor: pointer;
 }
 
 
@@ -254,12 +259,96 @@ main {
 
 .recommend {
     width: 100%;
-    height: 150px;
-    background: red;
+
 }
 
 .recommend .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
 }
+
+.recommend .content ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+
+}
+.recommend .content ul li{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.recommend .content ul li a {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: #444;
+    text-decoration: none;
+    position: relative;
+}
+
+.recommend .content ul li img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+.recommend .content ul li .title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.recommend .content ul li .description {
+    width: 130px;
+    position: absolute;
+    left: 10px;
+    color: #ffffff;
+    background-color: red;
+    border-radius: 30px;
+    font-size: 20px;
+}
+
+/*第三个宽一点*/
+.recommend .content ul li:nth-child(3) {
+    padding: 2px;
+    width: 300px;
+    background-color: lightpink;
+}
+.recommend .content ul li:nth-child(3) div:nth-child(1) {
+    display: inline-block;
+
+    width: 100px;
+    height: 100%;
+    background-color: #FFF;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.recommend .content ul li:nth-child(3) div:nth-child(1) img {
+    transform: translateY(50%);
+    width: 80px;
+    height: 80px;
+}
+.recommend .content ul li:nth-child(3) div:nth-child(2) {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 180px;
+    height: 100%;
+    background-color: #FFF;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
 
 .categories-carousel {
     display: flex;
@@ -280,6 +369,7 @@ main {
 .product-list {
     background-color: #a0a0a0;
 }
+
 
 
 
