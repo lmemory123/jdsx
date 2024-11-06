@@ -1,0 +1,287 @@
+/* public */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+}
+
+
+.w {
+    margin: 0 auto;
+    width: 1296px;
+}
+
+a {
+    text-decoration: none;
+    color: #444
+}
+
+
+.iconfont {
+    font-family: "iconfont", serif !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.w-text {
+    color: #666;
+    text-decoration: none;
+}
+
+.spacer {
+    overflow: hidden;
+    margin: 14px 8px 0;
+    width: .5px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 2);
+}
+
+/*  header */
+header {
+    background: #fff;
+}
+
+header .w {
+    height: 36px;
+    line-height: 36px;
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.fr, .fl {
+    list-style-type: disc;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    unicode-bidi: isolate;
+}
+
+.fr li, .fl li {
+    list-style: none;
+    display: inline-block;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+.w-text span {
+    color: red;
+}
+
+.dt {
+    position: relative;
+    z-index: 3;
+}
+
+.dd {
+    position: absolute;
+    top: 35px;
+    left: -1px;
+    z-index: 2;
+    display: none;
+    border: 1px solid black;
+    padding-right: 5px;
+    padding-left: 10px;
+    background: #FFF;
+}
+
+.dt:hover {
+    border: 1px solid black;
+}
+
+.dt:hover .dd {
+    display: block;
+}
+
+.dt:hover .link {
+    display: block;
+}
+
+.myjd .dd {
+    width: 280px;
+}
+
+
+.qycg .dd,
+.sjfw .dd,
+.wzdh .dd {
+    width: 200px;
+}
+
+.dt .link {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 3;
+    display: none;
+    width: 100%;
+    height: 0;
+    border: 1px solid yellow;
+}
+
+.dd-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.dd-content li ul li {
+    display: inline-block;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+    margin-right: 10px;
+}
+
+.dd-content .spacer {
+    overflow: hidden;
+    margin: 5px auto 5px;
+    width: 90%;
+    height: .5px;
+    background-color: rgba(80, 79, 79, 0.5);
+}
+
+
+/*main*/
+main {
+    height: 1080px;
+}
+
+/* Main sections */
+.search-recommend, .categories-carousel, .product-list {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+/* Specific section styles */
+.search-recommend {
+    height: 318px;
+    background: rgba(255, 0, 0, 0.5) url("../img/searchBGI.png") no-repeat center top;
+
+
+}
+
+.search {
+    width: 100%;
+    height: 134px;
+    /*background-color: #fff;*/
+    display: flex;
+    align-items: center;
+}
+
+.search .logo {
+    width: 240px;
+}
+
+.search .logo img {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-box {
+    width: 816px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-box .search-main {
+    position: relative;
+
+}
+
+.search-box .search-main input {
+    width: 816px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.search-box .search-main .search-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 40px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hot-title {
+    color: #666;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+
+.hot-title ul {
+    display: inline-block;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.hot-title ul li {
+    display: inline-block;
+    margin-right: 10px;
+    color: #666;
+    font-size: 13px;
+    list-style: none;
+}
+
+.recommend {
+    width: 100%;
+    height: 150px;
+    background: red;
+}
+
+.recommend .content {
+}
+
+.categories-carousel {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d0d0d0;
+}
+
+.categories {
+    width: 48%;
+    background-color: #c0c0c0;
+}
+
+.carousel {
+    width: 48%;
+    background-color: #b0b0b0;
+}
+
+.product-list {
+    background-color: #a0a0a0;
+}
+
+
+
+
+
