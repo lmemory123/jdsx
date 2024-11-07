@@ -86,6 +86,7 @@ header .w {
 
 .dt {
     position: relative;
+    border: 1px solid transparent;
     z-index: 3;
 }
 
@@ -132,7 +133,7 @@ header .w {
     display: none;
     width: 100%;
     height: 0;
-    border: 1px solid yellow;
+    border: 1px solid #FFF;
 }
 
 .dd-content {
@@ -438,24 +439,88 @@ main {
 
 .product-tag, .user-box {
     flex: 1;
+    background-color: #F7F8FC;
 }
 
 .carousel-box {
-    flex: 2;
+    flex: 3;
 
 }
 
 .product-tag {
-    background-color: blueviolet;
+    border-radius: 10px;
+}
+.product-tag ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-.user-box {
-    background-color: blanchedalmond;
+.product-tag ul li {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    padding: 11px 0 0 11px;
+}
+
+.product-tag ul li img {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+}
+.product-tag ul li i{
+    margin: 0 5px;
+    font-style: normal;
+}
+.product-tag ul li a{
+    color: #444;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.product-tag ul li a:hover{
+    color: red;
+    text-decoration: underline;
+    font-size: 14px;
 }
 
 .carousel-box {
     background-color: yellow;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
+
+.top-div {
+    width: 100%;
+    height: 50px;
+    background-color: lightblue;
+    margin-bottom: 10px;
+}
+
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-div {
+    flex: 1;
+    height:100%;
+    background-color: lightgray; /
+    margin-right: 10px;
+}
+
+.bottom-div:last-child {
+    margin-right: 0;
+}
+
+.user-box {
+}
+
 
 .categories {
     width: 48%;
