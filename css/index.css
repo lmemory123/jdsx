@@ -416,7 +416,7 @@ main {
 
 .recommend .content ul li:nth-child(3) div:nth-child(2) span {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     left: 50%;
     width: 130px;
     transform: translate(-50%, -50%);
