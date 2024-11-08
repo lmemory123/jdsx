@@ -8,8 +8,8 @@
 }
 
 body {
-/*    述责*/
-    background: linear-gradient(to bottom, red, red 10%, white 25%, white 100%);
+    /*    述责*/
+    background: linear-gradient(to bottom, red, red 10%, #ededed 25%, #f1f1f1 100%);
     height: 200vh; /* Ensure the body has enough height to scroll */
     margin: 0;
 }
@@ -450,6 +450,7 @@ main {
 .product-tag {
     border-radius: 10px;
 }
+
 .product-tag ul {
     list-style: none;
     padding: 0;
@@ -471,36 +472,63 @@ main {
     width: 16px;
     height: 16px;
 }
-.product-tag ul li i{
+
+.product-tag ul li i {
     margin: 0 5px;
     font-style: normal;
 }
-.product-tag ul li a{
+
+.product-tag ul li a {
     color: #444;
     text-decoration: none;
     font-size: 14px;
 }
 
-.product-tag ul li a:hover{
+.product-tag ul li a:hover {
     color: red;
     text-decoration: underline;
     font-size: 14px;
 }
 
 .carousel-box {
-    background-color: yellow;
     margin: 0 20px;
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 10px;
 }
 
 .top-div {
     width: 100%;
     height: 50px;
-    background-color: lightblue;
+    background-color: #F7F8FC;
+    border-radius: 20px;
     margin-bottom: 10px;
 }
+
+.top-div ul {
+    height: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+
+}
+
+.top-div ul li {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.top-div ul li a{
+    color: #444;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 
 .bottom-container {
     display: flex;
@@ -509,14 +537,127 @@ main {
 
 .bottom-div {
     flex: 1;
-    height:100%;
-    background-color: lightgray; /
+    height: 285px;
+    background-color: #F7F8FC;
+    border-radius: 20px;
     margin-right: 10px;
 }
 
 .bottom-div:last-child {
     margin-right: 0;
 }
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel-dots .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+    background-color: #717171;
+}
+
+.instantDeath {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+.instantDeath .product {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    height: 130px;
+    overflow: hidden;
+}
+
+.instantDeath .product .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.instantDeath .product img {
+    width: auto;
+    height: 40%;
+    margin-bottom: 10px;
+}
+
+.instantDeath .product .price {
+    font-size: 16px;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.icon-product{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+.icon-product .product{
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-top: 5px;
+    height: 60px;
+    overflow: hidden;
+}
+.icon-product .product img{
+    width: 30px;
+    height: 30px;
+}
+.icon-product .product .title{
+    font-size: 8px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
 
 .user-box {
 }
