@@ -1,3 +1,4 @@
+// 轮播图 当页面加载完成时，调用showSlides函数，每2秒切换一次图片
 document.addEventListener('DOMContentLoaded', function() {
     let slideIndex = 0;
     showSlides();
@@ -22,5 +23,30 @@ document.addEventListener('DOMContentLoaded', function() {
     function currentSlide(n) {
         slideIndex = n;
         showSlides();
+    }
+});
+//  页面滚动时，当滚动距离超过窗口高度的一半时，给body添加一个类名scrolled，否则移除这个类名
+document.addEventListener('scroll', function() {
+    if (window.scrollY > window.innerHeight ) {
+        document.body.classList.add('scrolled');
+    } else {
+        document.body.classList.remove('scrolled');
+    }
+});
+
+//  当页面滚动到底部时，每次复制5个商品项
+document.addEventListener('scroll', function() {
+    const productGrid = document.querySelector('.product-grid');
+    const productItems = document.querySelectorAll('.product-item');
+    let scrollCount = 0;
+
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight && scrollCount < 5) {
+        for (let i = 0; i < 5; i++) {
+            productItems.forEach(item => {
+                const clone = item.cloneNode(true);
+                productGrid.appendChild(clone);
+            });
+        }
+        scrollCount++;
     }
 });
