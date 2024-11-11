@@ -9,7 +9,7 @@
 
 body {
     /*    述责*/
-    background: linear-gradient(to bottom, red, red 10%, #ededed 25%, #f1f1f1 100%);
+    background: linear-gradient(to bottom, red, red 10%, pink 25%, #ededed 40%, #f1f1f1 100%);
     height: 200vh; /* Ensure the body has enough height to scroll */
     margin: 0;
 }
@@ -367,8 +367,9 @@ main {
     height: 40px;
     line-height: 40px;
     border-radius: 0 0 20px 20px;
-    background-color: yellow;
-    border: 0;
+    background-color: rgb(246,219,190);
+    color: red;
+
 
 
     z-index: 2;
@@ -385,7 +386,7 @@ main {
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
-    border-top: 10px solid yellow;
+    border-top: 10px solid rgb(246,219,190);
 }
 
 .recommend .content ul li:nth-child(3) div:nth-child(2) div::after {
@@ -397,7 +398,7 @@ main {
     width: 0;
     height: 0;
     border-right: 10px solid transparent;
-    border-top: 10px solid yellow;
+    border-top: 10px solid rgb(246,219,190);
 }
 
 
@@ -664,6 +665,8 @@ main {
 .user-box {
     display: flex;
     flex-direction: column;
+    background-color: #F7F8FC;
+    border-radius: 10px;
 
 }
 
@@ -673,9 +676,7 @@ main {
     flex-direction: column;
     align-items: flex-start;
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: #fff;
 }
 
 .user-item .avatar {
@@ -691,7 +692,7 @@ main {
 .user-item .avatar img {
     margin-left: 20px;
     width: 30px;
-    height: 40px;
+    height: 50px;
     flex: 1;
 }
 
@@ -767,22 +768,39 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px;
+    margin: 0 5px;
     height: 80px;
-    border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: #fff;
+    background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+}
+.user-item .user-vip .vip-item:nth-child(2) {
+    background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
 }
 
 .user-item .user-vip .vip-item .top-text {
     text-align: left;
     font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #FFF;
 }
 
 .user-item .user-vip .vip-item .bottom-text {
     text-align: center;
     margin-top: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 3px;
+    width: 80% ;
     font-size: 12px;
+    background-color: saddlebrown;
+    color: #FFF;
+    border-radius: 10px;
+}
+.user-item .user-vip .vip-item:nth-child(2) .bottom-text {
+    background-color: blue;
 }
 
 .categories {
