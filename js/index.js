@@ -36,12 +36,11 @@ document.addEventListener('scroll', function () {
     }
 });
 
+let scrollCount =0;
 //  当页面滚动到底部时，每次复制5个商品项
 document.addEventListener('scroll', function () {
     const productGrid = document.querySelector('.product-grid');
     const productItems = document.querySelectorAll('.product-item');
-    let scrollCount = 5;
-
     if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight && scrollCount < 5) {
         for (let i = 0; i < 25; i++) {
             let item = productItems[i];
