@@ -1,7 +1,7 @@
 // 轮播图 当页面加载完成时，调用showSlides函数，每2秒切换一次图片
 document.addEventListener('DOMContentLoaded', function () {
     let slideIndex = 0;
-    showSlides();
+    let slideTimeout;
 
     function showSlides() {
         let i;
@@ -12,20 +12,24 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         slideIndex++;
         if (slideIndex > slides.length) {
-            slideIndex = 1
+            slideIndex = 1;
         }
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(' active', '');
         }
         slides[slideIndex - 1].style.display = 'block';
         dots[slideIndex - 1].className += ' active';
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
+
+        clearTimeout(slideTimeout);
+        slideTimeout = setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
 
-    function currentSlide(n) {
-        slideIndex = n;
+    window.currentSlide = function(n) {
+        slideIndex = n-1;
         showSlides();
-    }
+    };
+
+    showSlides();
 });
 //  页面滚动时，当滚动距离超过窗口高度的一半时，给body添加一个类名scrolled，否则移除这个类名
 document.addEventListener('scroll', function () {
