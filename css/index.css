@@ -35,11 +35,14 @@ a {
 }
 
 .iconfont {
+    margin-left: 5px;
+    display: inline-block;
     font-family: "iconfont", serif !important;
     font-size: 16px;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* transform: rotate(90deg); Uncomment if icons need to be rotated by 90 degrees */
 }
 
 .w-text {
@@ -634,9 +637,7 @@ main {
 
 .icon-product .product {
     text-align: center;
-    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding-top: 5px;
     height: 60px;
     overflow: hidden;
@@ -896,6 +897,12 @@ main {
     font-size: 14px;
     color: #444;
     margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box; /* 设置显示方式 */
+    -webkit-line-clamp: 2;
+    line-clamp: 2;  /* 限制行数 */
+    -webkit-box-orient: vertical; /* 设置显示方向 */
 }
 
 .product-item .highlight {
