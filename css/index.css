@@ -42,7 +42,7 @@ a {
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* transform: rotate(90deg); Uncomment if icons need to be rotated by 90 degrees */
+     transform: rotate(90deg);
 }
 
 .w-text {
