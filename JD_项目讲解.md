@@ -20,8 +20,6 @@
 ## 2. 项目文件结构
 
 ```
-d:\peixun\html\jdsx\
-│
 ├── index.html         // 主页面HTML结构
 ├── css\
 │   └── index.css      // 主样式文件
